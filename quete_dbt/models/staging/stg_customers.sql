@@ -8,3 +8,16 @@ renamed as (
     from source
 )
 select * from renamed
+
+version: 2
+
+models:
+    - name: stg_customers
+      columns:
+        - name: customer_id
+          tests:
+            - not_null
+            - unique
+        - name: customer_name
+          tests:
+            - not_null

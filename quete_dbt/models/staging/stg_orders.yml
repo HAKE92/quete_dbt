@@ -5,3 +5,16 @@ models:
       columns:
         - name: order_id
         - name: order_name
+
+        version: 2
+
+models:
+    - name: stg_orders
+      columns:
+        - name: order_id
+          tests:
+            - not_null
+            - unique
+        - name: order_name
+          tests:
+            - not_null
